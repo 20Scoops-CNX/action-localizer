@@ -6,8 +6,8 @@
   "author": "Patawee <psgolf16@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint src --fix",
-    "lint:check": "eslint src --color",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint . --color",
     "prettier": "prettier --write '**/*.js'",
     "prettier:check": "prettier --list-different '**/*.js'"
   },
@@ -28,6 +28,7 @@
     "readline": "^1.3.0",
     "stringify-object": "^3.3.0",
     "strings-file": "^0.0.5",
-    "xmlbuilder": "^13.0.2"
+    "xmlbuilder": "^13.0.2",
+    "yargs": "^15.0.2"
   }
 }
