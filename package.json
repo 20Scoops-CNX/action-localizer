@@ -6,8 +6,8 @@
   "author": "Patawee <psgolf16@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint . --fix",
-    "lint:check": "eslint . --color",
+    "lint": "eslint src --fix",
+    "lint:check": "eslint src --color",
     "prettier": "prettier --write '**/*.js'",
     "prettier:check": "prettier --list-different '**/*.js'"
   },
