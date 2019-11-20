@@ -32,10 +32,10 @@ if (typeof organization.clientSecret !== 'undefined') {
     'If using under 20Scoops organization. Can input only client_secret. If not 20scoops please input data order by client_id project_id client_secret .',
   )
   message(
-    'Example default 20scoops. node dist/refresh_token.js --clientSecret=your_client_secret',
+    'Example default 20scoops. node refresh_token/index.js --clientSecret=your_client_secret',
   )
   message(
-    'Example other organization. node dist/refresh_token.js --clientID=your_client_id --projectID=your_project_id --clientSecret=your_client_secret',
+    'Example other organization. node refresh_token/index.js --clientID=your_client_id --projectID=your_project_id --clientSecret=your_client_secret',
   )
   process.exit(1)
 }
