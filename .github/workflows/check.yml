@@ -36,4 +36,4 @@ jobs:
           LOCALIZER_CREDENTIAL_TOKEN: ${{ secrets.LOCALIZER_CREDENTIAL_TOKEN}}
           LOCALIZER_REFRESH_TOKEN: ${{ secrets.LOCALIZER_REFRESH_TOKEN}}
       - name: Check folder
-        run: ls -la && cd locales
+        run: cd locales && ls -la
