@@ -1,17 +1,20 @@
 {
   "name": "action-localizer",
   "version": "1.0.1",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/20Scoops-CNX/action-localizer.git",
-  "author": "Patawee <psgolf16@gmail.com>",
+  "author": "",
   "license": "MIT",
   "scripts": {
+    "build": "yarn build:index",
+    "build:index": "ncc build src/index.js && rm -rf dist/locales",
     "lint": "eslint . --fix",
     "lint:check": "eslint . --color",
     "prettier": "prettier --write '**/*.js'",
     "prettier:check": "prettier --list-different '**/*.js'"
   },
-  "dependencies": {
+  "devDependencies": {
+    "20scoops-localizer": "^1.2.4",
     "@actions/core": "^1.2.0",
     "@zeit/ncc": "^0.20.5",
     "eslint": "^6.6.0",
