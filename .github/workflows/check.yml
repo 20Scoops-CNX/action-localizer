@@ -35,5 +35,5 @@ jobs:
         env:
           LOCALIZER_CREDENTIAL_TOKEN: ${{ secrets.LOCALIZER_CREDENTIAL_TOKEN}}
           LOCALIZER_REFRESH_TOKEN: ${{ secrets.LOCALIZER_REFRESH_TOKEN}}
-      - name: Install yarn
-        run: ls -la     
+      - name: Check folder
+        run: ls -la && cd locales
