@@ -15,7 +15,7 @@
     "prettier:check": "prettier --list-different '**/*.js'"
   },
   "devDependencies": {
-    "20scoops-localizer": "^1.2.4",
+    "20scoops-localizer": "1.2.5",
     "@actions/core": "^1.2.0",
     "@zeit/ncc": "^0.20.5",
     "eslint": "^6.6.0",
