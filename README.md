@@ -7,11 +7,11 @@ This action is a export localizer data from google sheet
 The following settings must be passed as environment variables as shown in the
 example.
 
-| Key              | Value                                         | Suggested Type | Required | Default                      |
-| ---------------- | --------------------------------------------- | -------------- | -------- | ---------------------------- |
-| `CLIENT_ID`      | Can get from google credential at client_id.  | `secret env`   | **Yes**  | `CLIENT_ID of 20Scoops CNX`  |
-| `PROJECT_ID`     | Can get from google credential at project_id. | `secret env`   | **Yes**  | `PROJECT_ID of 20Scoops CNX` |
-| `LOCALIZER_FILE` | Location file of localizer.                   | `env`          | No       | `./localizer.js`             |
+| Key              | Value                                           | Suggested Type | Required | Default                      |
+| ---------------- | ----------------------------------------------- | -------------- | -------- | ---------------------------- |
+| `CLIENT_ID`      | Can get from google credential at client_id.    | `secret env`   | **Yes**  | `CLIENT_ID of 20Scoops CNX`  |
+| `PROJECT_ID`     | Can get from google credential at project_id.   | `secret env`   | **Yes**  | `PROJECT_ID of 20Scoops CNX` |
+| `LOCALIZER_FILE` | Location file of localizer. [Example](#Example) | `env`          | No       | `./localizer.js`             |
 
 ## Configuration with Env
 
@@ -22,16 +22,6 @@ example.
 | ---------------------------- | ------------------------------------------------------------------------------------------------- | -------------- | -------- | ------- |
 | `LOCALIZER_CREDENTIAL_TOKEN` | Can get from google credential at client_secret.                                                  | `secret env`   | **Yes**  | N/A     |
 | `LOCALIZER_REFRESH_TOKEN`    | Can get after run manual localizer in local [How to get LOCALIZER_REFRESH_TOKEN](#Refresh-Token). | `secret env`   | **Yes**  | N/A     |
-
-Minimum input in `localizer.js`
-
-```js
-// localizer.js
-
-module.exports = {
-  url: 'https://docs.google.com/spreadsheets/',
-}
-```
 
 ### Refresh Token
 
