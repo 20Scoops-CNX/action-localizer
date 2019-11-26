@@ -22,3 +22,18 @@ jobs:
         run: yarn
       - name: Check code on ci
         run: yarn lint:check && yarn prettier:check
+  localizer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Localizer
+        uses: ./
+        with:
+          CLIENT_ID: ${{ secrets.CLIENT_ID}}
+          PROJECT_ID: ${{ secrets.PROJECT_ID}}
+          LOCALIZER_FILE:  '.github/test.js'
+        env:
+          LOCALIZER_CREDENTIAL_TOKEN: ${{ secrets.LOCALIZER_CREDENTIAL_TOKEN}}
+          LOCALIZER_REFRESH_TOKEN: ${{ secrets.LOCALIZER_REFRESH_TOKEN}}
+      - name: Install yarn
+        run: ls -la     
