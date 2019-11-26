@@ -9,8 +9,8 @@ example.
 
 | Key              | Value                                           | Suggested Type | Required | Default                      |
 | ---------------- | ----------------------------------------------- | -------------- | -------- | ---------------------------- |
-| `CLIENT_ID`      | Can get from google credential at client_id.    | `secret env`   | **Yes**  | `CLIENT_ID of 20Scoops CNX`  |
-| `PROJECT_ID`     | Can get from google credential at project_id.   | `secret env`   | **Yes**  | `PROJECT_ID of 20Scoops CNX` |
+| `CLIENT_ID`      | Can get from google credential at client_id.    | `secret env`   | No       | `CLIENT_ID of 20Scoops CNX`  |
+| `PROJECT_ID`     | Can get from google credential at project_id.   | `secret env`   | No       | `PROJECT_ID of 20Scoops CNX` |
 | `LOCALIZER_FILE` | Location file of localizer. [Example](#Example) | `env`          | No       | `./localizer.js`             |
 
 ## Configuration with Env
