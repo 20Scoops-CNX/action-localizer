@@ -1,25 +1,27 @@
-# Actions Localizer
+<div align="center"><h1>Actions Localizer</h1></div>
 
 This action is a export localizer data from google sheet
 
-## Inputs
+## Configuration with With
 
-### `CLIENT_ID`, `PROJECT_ID`, `LOCALIZER_CREDENTIAL_TOKEN`
+The following settings must be passed as environment variables as shown in the
+example.
 
-**Required** Can get from google credential.
+| Key              | Value                           | Suggested Type | Required | Default                      |
+| ---------------- | ------------------------------- | -------------- | -------- | ---------------------------- |
+| `CLIENT_ID`      | Can get from google credential. | `secret env`   | **Yes**  | `CLIENT_ID of 20Scoops CNX`  |
+| `PROJECT_ID`     | Can get from google credential. | `secret env`   | **Yes**  | `PROJECT_ID of 20Scoops CNX` |
+| `LOCALIZER_FILE` | Location file of localizer.     | `env`          | No       | `./localizer.js`             |
 
-Example
+## Configuration with Env
 
-![credential-example](.github/images/example.png)
+The following settings must be passed as environment variables as shown in the
+example.
 
-### `LOCALIZER_REFRESH_TOKEN`
-
-**Required** Can get after run manual localizer in local.
-[How to get LOCALIZER_REFRESH_TOKEN](#Refresh-Token)
-
-### `LOCALIZER_FILE`
-
-**Required** Location file of localizer. The default is `./localizer.js`
+| Key                          | Value                                                                                             | Suggested Type | Required | Default |
+| ---------------------------- | ------------------------------------------------------------------------------------------------- | -------------- | -------- | ------- |
+| `LOCALIZER_CREDENTIAL_TOKEN` | Can get from google credential.                                                                   | `secret env`   | **Yes**  | N/A     |
+| `LOCALIZER_REFRESH_TOKEN`    | Can get after run manual localizer in local [How to get LOCALIZER_REFRESH_TOKEN](#Refresh-Token). | `secret env`   | **Yes**  | N/A     |
 
 Minimum input in `localizer.js`
 
@@ -27,19 +29,16 @@ Minimum input in `localizer.js`
 // localizer.js
 
 module.exports = {
-  url: "https://docs.google.com/spreadsheets/"
-};
+  url: 'https://docs.google.com/spreadsheets/',
+}
 ```
 
 ### Refresh Token
 
-You can clone this project and run
-`node refresh_token/index.js $CLIENT_ID $PROJECT_ID $LOCALIZER_CREDENTIAL_TOKEN`.
-Google must be authenticate with your account and get some code in website.
-After that please give that code to command line and press enter.
+You can clone this project and run `node refresh_token/index.js` and see comment
+at command line. Google must be authenticate with your account and get some code
+in website. After that please give that code to command line and press enter.
 `LOCALIZER_REFRESH_TOKEN` is visible at command line.
-
-![refresh-token-example](.github/images/example_refresh_token.png)
 
 ### Can add more configuration in file `localizer.js`
 
@@ -49,43 +48,46 @@ After that please give that code to command line and press enter.
 // localizer.js
 
 module.exports = {
-  dest: "./locales/",
+  dest: './locales/',
   filename: {
-    en: "en.js",
-    de: "de.js"
+    en: 'en.js',
+    de: 'de.js',
   },
-  url: "https://docs.google.com/spreadsheets/",
-  sheetNames: ["sheet1", "sheet2"],
-  module: "android-xml",
-  ignoreColumns: ["th", "DE"]
-};
-
-// Remark: ignoreColumns is a case sensitive. If input not equal head line. System not ignore.
+  url: 'https://docs.google.com/spreadsheets/',
+  sheetName: ['sheet1', 'sheet2'],
+  module: 'android-xml',
+  ignoreColumns: ['th', 'DE'],
+}
 ```
 
 ## We provide following configuration.
 
-- **url**: Google Sheets URL. **(Required)**
-- **dest**: Location of local file storage The default is `/locales/`.
-  **(Optional)**
-- **filename**: Filename will corresponds to language. If not, localizer will
-  use `column headers`. **(Optional)**
-  **(Optional)**
-- **sheetNames**: Script will retrieve locales from specified sheet name via
-  this config. If not, localizer will always retrieve locales from
-  `first sheet`. But if you have multiple sheet name is a export.you also can
-  provide array of sheet name (it'll be merged for same language name)
-  **(Optional)**
-- **module**: Type of output `esm`, `commonjs`, `android-xml` or
-  `ios-strings`.The default is `esm`. **(Optional)**
+| Key             | Value                                                                   | Required | Default                      |
+| --------------- | ----------------------------------------------------------------------- | -------- | ---------------------------- |
+| `url`           | Google Sheets URL.                                                      | **Yes**  | N/A                          |
+| `dest`          | Location of local file storage.                                         | No       | `./locales/`                 |
+| `filename`      | Filename will corresponds to language.                                  | No       | `{en: 'en.js',de: 'de.js',}` |
+| `ignoreColumns` | Script will ignore columns is select                                    | No       | `[]`                         |
+| `sheetName`     | Script will retrieve locales from specified sheet name via this config. | No       | `''`                         |
+| `module`        | Type of output `esm`, `commonjs`, `android-xml` or `ios-strings`.       | No       | `esm`                        |
+
+\*\* If sheetName more than 1. You can set follow
+`sheetName:['sheet1', 'sheet2']`
 
 ## Example usage
 
 ```yml
-- name: Localizer-Export
-uses: 20Scoops-CNX/actions-localizer@master
-with:
-    LOCALIZER_CREDENTIAL_TOKEN: ${{ secrets.LOCALIZER_CREDENTIAL_TOKEN }}
-    LOCALIZER_REFRESH_TOKEN: ${{ secrets.LOCALIZER_REFRESH_TOKEN }}
-    LOCALIZER_FILE: './src/localizer.js'
+localizer:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v1
+    - name: Localizer
+      uses: ./
+      with:
+        CLIENT_ID: ${{ secrets.CLIENT_ID }}
+        PROJECT_ID: ${{ secrets.PROJECT_ID }}
+        LOCALIZER_FILE: '.github/test.js'
+      env:
+        LOCALIZER_CREDENTIAL_TOKEN: ${{ secrets.LOCALIZER_CREDENTIAL_TOKEN }}
+        LOCALIZER_REFRESH_TOKEN: ${{ secrets.LOCALIZER_REFRESH_TOKEN }}
 ```
