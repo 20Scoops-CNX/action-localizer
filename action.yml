@@ -4,12 +4,6 @@ branding:
   icon: 'book-open'
   color: 'blue'
 inputs:
-  LOCALIZER_CREDENTIAL_TOKEN:
-    description: 'Secret token of credential'
-    required: true
-  LOCALIZER_REFRESH_TOKEN:
-    description: 'Refresh token can get from after manual run localizer'
-    required: true
   CLIENT_ID:
     description:
       'Client id of credential json file. If organize is 20CNX. We can use
