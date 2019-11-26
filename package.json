@@ -6,8 +6,9 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:index",
+    "build": "yarn build:index && yarn build:refresh-token",
     "build:index": "ncc build src/index.js && rm -rf dist/locales",
+    "build:refresh-token": "ncc build src/refresh_token.js -o refresh_token && rm -rf refresh_token/locales",
     "lint": "eslint . --fix",
     "lint:check": "eslint . --color",
     "prettier": "prettier --write '**/*.js'",
