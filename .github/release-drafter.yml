@@ -11,7 +11,7 @@ categories:
       - 'actions: bugfix'
       - 'actions: bug'
   - title: '🧰 Maintenance'
-    label:
+    labels:
       - 'actions: documentation'
       - 'chore: enhancement'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
