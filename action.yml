@@ -1,0 +1,25 @@
+name: '20Scoops-CNX-Localizer'
+description: 'Export google sheet with localizer'
+branding:
+  icon: 'book-open'
+  color: 'blue'
+inputs:
+  CLIENT_ID:
+    description:
+      'Client id of credential json file. If organize is 20CNX. We can use
+      default'
+    required: false
+    default: '566100359694-bou3ui0ph4bdanp2mt0m3jla7vaf5v2t.apps.googleusercontent.com'
+  PROJECT_ID:
+    description:
+      'Project id of credential json file. If organize is 20CNX. We can use
+      default'
+    required: false
+    default: 'quickstart-1573029008546'
+  LOCALIZER_FILE:
+    description: 'Localizer file'
+    required: false
+    default: './localizer.js'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

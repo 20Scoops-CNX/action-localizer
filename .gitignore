@@ -2,3 +2,5 @@ node_modules/
 credentials.txt
 localizer.js
 token.json
+locales/
+.DS_Store
