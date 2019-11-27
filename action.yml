@@ -1,8 +1,8 @@
 name: '20Scoops-CNX-Localizer'
 description: 'Export google sheet with localizer'
 branding:
-  icon: 'book-open'
-  color: 'blue'
+  icon: 'toggle-right'
+  color: 'red'
 inputs:
   CLIENT_ID:
     description:
