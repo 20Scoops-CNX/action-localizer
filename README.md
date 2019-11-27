@@ -72,7 +72,7 @@ localizer:
   steps:
     - uses: actions/checkout@v1
     - name: Localizer
-      uses: ./
+      uses: 20Scoops-CNX/action-localizer@master
       with:
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         PROJECT_ID: ${{ secrets.PROJECT_ID }}
