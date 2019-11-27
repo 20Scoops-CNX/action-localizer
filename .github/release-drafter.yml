@@ -8,11 +8,11 @@ categories:
   - title: '🐛 Bug Fixes'
     labels:
       - 'action: fix'
-      - 'actions: bugfix'
       - 'actions: bug'
+      - 'actions: bugfix'
   - title: '🧰 Maintenance'
     labels:
-      - 'actions: documentation'
+      - 'chore: documentation'
       - 'chore: enhancement'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 template: |
