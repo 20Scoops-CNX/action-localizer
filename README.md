@@ -1,6 +1,7 @@
 <div align="center"><h1>Actions Localizer</h1></div>
 
-This action is a export localizer data from google sheet
+This action is a export localizer data from google sheet.
+[Example to use](#Example-usage)
 
 ## Configuration with With
 
