@@ -21,5 +21,5 @@ inputs:
     required: false
     default: './localizer.js'
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: 'docker'
+  image: 'Dockerfile'

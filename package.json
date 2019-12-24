@@ -6,9 +6,6 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:index && yarn build:refresh-token",
-    "build:index": "ncc build src/index.js && rm -rf dist/locales",
-    "build:refresh-token": "ncc build src/refresh_token.js -o refresh_token && rm -rf refresh_token/locales",
     "lint": "eslint . --fix",
     "lint:check": "eslint . --color",
     "prettier": "prettier --write '**/*.js'",
@@ -17,7 +14,6 @@
   "devDependencies": {
     "20scoops-localizer": "1.2.6",
     "@actions/core": "^1.2.0",
-    "@zeit/ncc": "^0.20.5",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
