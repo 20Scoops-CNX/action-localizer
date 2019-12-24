@@ -26,7 +26,7 @@ example.
 
 ### Refresh Token
 
-You can clone this project and run `node refresh_token/index.js` and see comment
+You can clone this project and run `node src/refresh_token.js` and see comment
 at command line. Google must be authenticate with your account and get some code
 in website. After that please give that code to command line and press enter.
 `LOCALIZER_REFRESH_TOKEN` is visible at command line.
