@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"20scoops-localizer@1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/20scoops-localizer/-/20scoops-localizer-1.2.5.tgz#4a06764c741cf422b8f22c0e9f12b295aab8f936"
-  integrity sha512-Xw0Q/wHgSbSDs29p0L5UGDxHKn1Df4WHeVeehG9z+iXtoON0/58GgZ9r9fsPL4/SPYXJfyU0BspuG4vtqbW43Q==
+"20scoops-localizer@1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/20scoops-localizer/-/20scoops-localizer-1.2.6.tgz#f59268559385ae91951ae9c7b8c82f545250faa8"
+  integrity sha512-bzW7SQEJuoXYPM3Oj8IG3l+TQwROK9ZOKu5L1UXKvWVGVXH7gj5PuWfh70Jyc3nu2boGDgZPj9iLW2ffHWanBw==
   dependencies:
     chalk "^2.4.2"
     fs-extra "^8.1.0"
@@ -478,10 +478,10 @@ eslint-visitor-keys@^1.1.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.1.0.tgz#e2a82cea84ff246ad6fb57f9bde5b46621459ec2"
   integrity sha512-8y9YjtM1JBJU/A9Kc+SbaOV4y29sSWckBwMHa+FGtVj5gN/sbnKDf6xJUl+8g7FAij9LVaP8C24DUiH/f/2Z9A==
 
-eslint@^6.6.0:
-  version "6.7.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.7.1.tgz#269ccccec3ef60ab32358a44d147ac209154b919"
-  integrity sha512-UWzBS79pNcsDSxgxbdjkmzn/B6BhsXMfUaOHnNwyE8nD+Q6pyT96ow2MccVayUTV4yMid4qLhMiQaywctRkBLA==
+eslint@^6.7.2:
+  version "6.7.2"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.7.2.tgz#c17707ca4ad7b2d8af986a33feba71e18a9fecd1"
+  integrity sha512-qMlSWJaCSxDFr8fBPvJM9kJwbazrhNcBU3+DszDW1OlEwKBBRWsJc7NJFelvwQpanHCR14cOLD41x8Eqvo3Nng==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"
