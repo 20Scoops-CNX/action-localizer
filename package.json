@@ -29,6 +29,6 @@
     "stringify-object": "^3.3.0",
     "strings-file": "^0.0.5",
     "xmlbuilder": "^13.0.2",
-    "yargs": "^15.0.2"
+    "yargs": "^15.1.0"
   }
 }
