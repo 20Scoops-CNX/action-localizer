@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"20scoops-localizer@1.2.6":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/20scoops-localizer/-/20scoops-localizer-1.2.6.tgz#f59268559385ae91951ae9c7b8c82f545250faa8"
-  integrity sha512-bzW7SQEJuoXYPM3Oj8IG3l+TQwROK9ZOKu5L1UXKvWVGVXH7gj5PuWfh70Jyc3nu2boGDgZPj9iLW2ffHWanBw==
+"20scoops-localizer@1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/20scoops-localizer/-/20scoops-localizer-1.2.7.tgz#d3d06f59c55fde7ca1477c65b2ee8924b010050b"
+  integrity sha512-JCrZM3YOYkP+QajZkK4NpxgzrYSqPG4DKgnBy+61ULvEd95EcDG1xuZ2GxGFmv97EVUNiFh6XlOJb1q+q+99HA==
   dependencies:
     chalk "^2.4.2"
     fs-extra "^8.1.0"

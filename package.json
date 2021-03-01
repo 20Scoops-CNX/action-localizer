@@ -12,7 +12,7 @@
     "prettier:check": "prettier --list-different '**/*.js'"
   },
   "devDependencies": {
-    "20scoops-localizer": "1.2.6",
+    "20scoops-localizer": "1.2.7",
     "@actions/core": "^1.2.6",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.6.0",
